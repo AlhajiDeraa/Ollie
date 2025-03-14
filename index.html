@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Full page styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #C8A2C8; /* Lilac background */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Message icon */
+        .message-icon {
+            font-size: 4rem;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+        }
+
+        .message-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hidden content */
+        .hidden-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: absolute;
+        }
+
+        /* Styling the text */
+        h1 {
+            font-size: 2rem;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards ease-in-out;
+        }
+
+        /* Floating emoji effect */
+        .emoji {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.8;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Mail envelope animation */
+        .mail {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: mail-fly 6s infinite ease-in-out;
+        }
+
+        @keyframes mail-fly {
+            0% { transform: translate(-50px, 0px) rotate(0deg); }
+            50% { transform: translate(50px, -30px) rotate(10deg); }
+            100% { transform: translate(-50px, 0px) rotate(0deg); }
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Message icon that she clicks -->
+<div class="message-icon" onclick="showMessage()">📩</div>
+
+<!-- Hidden love message & animations -->
+<div class="hidden-content" id="loveMessage">
+    <!-- Floating Emojis -->
+    <div class="emoji" style="top: 5%; left: 10%;">💋</div>
+    <div class="emoji" style="top: 10%; left: 50%;">❤️</div>
+    <div class="emoji" style="top: 15%; left: 80%;">💋</div>
+    <div class="emoji" style="top: 25%; left: 20%;">❤️</div>
+    <div class="emoji" style="top: 35%; left: 60%;">💋</div>
+    <div class="emoji" style="top: 45%; left: 90%;">❤️</div>
+    <div class="emoji" style="top: 55%; left: 40%;">💋</div>
+    <div class="emoji" style="top: 65%; left: 70%;">❤️</div>
+    <div class="emoji" style="top: 75%; left: 30%;">💋</div>
+    <div class="emoji" style="top: 85%; left: 80%;">❤️</div>
+    <div class="emoji" style="top: 90%; left: 10%;">💋</div>
+
+    <!-- Flying Mail Envelopes -->
+    <div class="mail" style="top: 20%; left: 15%;">✉️</div>
+    <div class="mail" style="top: 40%; left: 75%;">✉️</div>
+    <div class="mail" style="top: 60%; left: 30%;">✉️</div>
+    <div class="mail" style="top: 80%; left: 50%;">✉️</div>
+
+    <!-- Love Message -->
+    <h1>I love you, Ollie, and I will choose you over and over again. ❤️</h1>
+</div>
+
+<!-- JavaScript to Reveal the Message -->
+<script>
+        function showMessage() {
+            document.querySelector(".message-icon").style.display = "none"; // Hide the icon
+            document.getElementById("loveMessage").style.display = "flex"; // Show the message
+        }
+    </script>
+
+</body>
+</html>
